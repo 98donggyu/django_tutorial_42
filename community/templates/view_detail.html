@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Details </title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td> no </td>
+                <td> {{ article_detail.pk }}</td>
+            </tr>
+            <tr>
+                <td> 제목 </td>
+                <td> {{ article_detail.title }}</td>
+            </tr>
+            <tr>
+                <td> 저자 </td>
+                <td> {{ article_detail.name }}</td>
+            </tr>
+            <tr>
+                <td> 내용 </td>
+                <td> {{ article_detail.contents }}</td>
+            </tr>
+            <tr>
+                <td> Email </td>
+                <td> {{ article_detail.email }}</td>
+            </tr>
+        </table>
+    </body>
+</html>
