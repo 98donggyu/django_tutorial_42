@@ -9,5 +9,4 @@ TIME_ZONE=='Asia/Seoul
 
 import os
 'DIRS' : [os.path.join(BASE_DIR, 'templates')]
-
 ```
