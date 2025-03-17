@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Documents </title>
+    </head>
+    <body>
+        <h1> 글 목록</h1>
+        <p> 이름 | 제목 | 작성 날짜 </p>
+        <ul>
+            {% for article in article_list %}
+            <li> 
+                {{ article.title }} | {{ article.name }} | {{ article.cdate|date:"Y년 M d일 D"}}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
