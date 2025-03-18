@@ -12,6 +12,14 @@
                 <a href="/view_detail/{{ article.id }}">{{ article.title }}</a> | {{ article.name }} | {{ article.cdate|date:"Y년 M d일 D"}}
             </li>
             {% endfor %}
+            <div class="list_button">
+                <div class="list_index">
+                    <a href='/'><button > 홈으로 </button></a>
+                </div>
+                <div class="list_reset">
+                    <button> 글 삭제 </button>
+                </div>
+            </div>
         </ul>
     </body>
 </html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title > 최근 글 목록 </title>
+        <style>
+            .index_header {
+                text-align: center;
+                margin: 30px 0px;}
+            .index_button {
+                display: flex;
+                        
+            }
+            .index_write{
+                margin-top: 30px;
+                margin-right: 30px;
+            }
+            .index_list{
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="index_header"> 홈에서 최근 글 목록 보기 </h1>
+        <ul>
+            {% for article in latest_article_list %}
+            <li>
+                <a href="/view_detail/{{ article.id }}">{{ article.title }}</a> | {{ article.name }} | {{ article.cdate|date:"Y년 n월 j일 l"}}
+            </li>
+            {% endfor %}
+            <div class="index_button">
+                <div class="index_write">
+                    <a href="/write"><button > 글 작성 </button></a>
+                </div>
+                <div class="index_list">
+                    <a href="/list"><button>전체 글 목록</button></a>
+                </div>
+            </div>
+        </ul>
+    </body>
+</html>
