@@ -2,9 +2,24 @@
     <head>
         <meta charset="UTF-8">
         <title> Documents </title>
+        <style>
+            .list_header {
+                text-align: center;
+                margin: 30px 0px;}
+            .list_button {
+                display: flex;       
+            }
+            .list_index{
+                margin-top: 30px;
+                margin-right: 30px;
+            }
+            .list_reset{
+                margin-top: 30px;
+            }
+        </style>
     </head>
     <body>
-        <h1> 글 목록</h1>
+        <h1 class="list_header"> 글 목록</h1>
         <p> 이름 | 제목 | 작성 날짜 </p>
         <ul>
             {% for article in article_list %}
@@ -17,7 +32,7 @@
                     <a href='/'><button > 홈으로 </button></a>
                 </div>
                 <div class="list_reset">
-                    <button> 글 삭제 </button>
+                    <button> 초기화 </button>
                 </div>
             </div>
         </ul>

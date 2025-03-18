@@ -2,6 +2,11 @@
     <head>
         <meta charset="UTF-8">
         <title> Details </title>
+        <style>
+            .detail_reset{
+                margin-top: 30px;
+            }
+        </style>
     </head>
     <body>
         <table>
@@ -26,5 +31,11 @@
                 <td> {{ article_detail.email }}</td>
             </tr>
         </table>
+        <div class="detail_reset">
+            <form method="post" action="{% url 'delete_article' article_detail.pk %}">
+                {% csrf_token %}
+                <button type="submit"> 글 삭제 </button>
+            </form>
+        </div>
     </body>
 </html>
