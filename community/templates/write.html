@@ -1,14 +1,29 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-    </head>
-    <body>
-        <form action="" method="post">
-            <table>
-                {{ form }} {% csrf_token %}
-            </table>
-            <button type="submit"> 확인 </button>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+<title > 글 작성 </title>
+{% endblock title %}
+{% block style %}   
+<style>
+    .write_header{
+        margin: 30px 0px;
+        text-align: center;
+    }
+    .write_button{
+        margin : 30px;
+    }
+</style>
+{% endblock style %}
+{% block contents %}
+<h1 class="write_header"> 글 작성 </h1>
+<table>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+<div class="write_button">
+    <button  type="submit" class="btn btn-primary btn-lg"> 확인 </button>
+</div>   
+</form>
+</table>
+
+{% endblock contents %}
