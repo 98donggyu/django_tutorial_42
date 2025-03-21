@@ -20,6 +20,7 @@ from django_tutor.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', index, name='index'),
     path('', include('community.urls')),
+    path('', include('dashboard.urls')),
 ]

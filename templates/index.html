@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}   
 <title>최근 글 목록</title>
 {% endblock title %}
@@ -52,7 +53,7 @@
     </div>
 
     <div class="col-6">
-        2
+        <img src="{% static 'images/Rui.jpg' %}" alt="My dog" style="width: 300; height: 300;">
     </div>
 </div>
 {% endblock contents %}
